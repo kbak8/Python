@@ -1,0 +1,28 @@
+tip = 0
+bill = 0
+total = 0
+final = 0
+
+tip = float(input("Enter tip amount"))
+bill = float(input("Enter Bill before tip"))
+total = bill * tip
+final = total + bill
+print("Total Bill is: ",final)
+
+mile = 0
+drive = 0
+cost = 0
+
+mile = float(input("Enter number of miles driven"))
+drive = float(input("Enter cost of driving one mile"))
+cost = mile * drive
+print("The total cost is: ",cost)
+
+med = 0
+comp = 0
+due = 0
+
+med = float(input("Enter total medical costs for year"))
+comp = float(input("Enter medical companies payment for the year"))
+due = med - comp
+print("The amount still due is: ",due)
