@@ -1,0 +1,16 @@
+homeCost = 0
+homeProfit = 0
+morgCost = 0
+realCost = 0
+insCost = 0
+taxCost = 0
+
+homeCost = float(input("End the sale price of the house"))
+realCost=float(input("Enter the % comission the realtor gets"))
+insCost=float(input("Enter the title insurance fee"))
+taxCost=float(input("Enter the transfer tax amount"))
+morgCost=float(input("Enter the remaining morgage amount on the house"))
+
+homeProfit = homeCost - morgCost -realCost - insCost - taxCost
+
+print("Your profit after all that is ",homeProfit)
