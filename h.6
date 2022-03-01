@@ -1,0 +1,13 @@
+number1 = 0
+number2 = 0
+
+number1 = float(input("Enter Number to be guessed 1-100: "))
+while True:
+    number2 = float(input("Enter guess 1-100: "))
+    if number1 == number2:
+        print("Your Guess is Correct!!")
+        break
+    if number1 > number2:
+      print("Your Guess is to low")
+    else:
+      print("Your Guess is to High")
