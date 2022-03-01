@@ -1,0 +1,46 @@
+from tkinter import * 
+from tkinter import messagebox
+def Finish():  
+    messagebox.showinfo("One Bedroom","$350 per Month")
+    print("$350 per Month")
+class winFinish(): 
+    def __init__(self): 
+        win = Tk() 
+        win.geometry('1000x1000') # Size 500, 200 
+        frame = Frame(win,height=500,width=750,bg="yellow") 
+        frame.pack() 
+        btn = Button(frame, text='Studio', command=Studio) 
+        btn.pack() 
+        btn.place(relx=0.25, rely=0.5, anchor=CENTER)
+        btn = Button(frame, text='1 Bedroom', command=OneBed)
+        btn.pack()
+        btn.place(relx=0.5, rely=0.5, anchor=CENTER)
+        btn = Button(frame, text='2 Bedroom', command=TwoBed)
+        btn.pack()
+        btn.place(relx=.75, rely=0.5, anchor=CENTER)
+        ck = Checkbutton(frame, text="Lake View", command=Lk)
+        ck.pack()
+        ck.place(relx=.25, rely=.75, anchor=CENTER)
+        txt = Text(frame, text="Fortune's Vacation Resort")
+        txt.pack()
+        txt.insert(height=10, width=20, anchor=CENTER)
+        win.mainloop()
+
+
+def OneBed(): 
+    messagebox.showinfo("One Bedroom Appartment","$350 per Month") 
+    print("$350 per month") 
+def TwoBed():
+    messagebox.showinfo("Two Bedroom Apartment","$400 per Month")
+    print("$400 per Month")
+def Studio():
+    messagebox.showinfo("Studio Style Appartment","$300 per Month")
+    print("$300 per Month")
+def Lk():
+    messagebox.showinfo("Lake View","$50 additional")
+    print("add $50")
+
+def mainloop(): 
+    winS = winFinish() 
+mainloop()   
+   
