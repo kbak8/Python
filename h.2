@@ -1,0 +1,15 @@
+hourlyWage = 0.00
+hoursWorked = 0.00
+grossPay = 0.00
+taxRate = 0.00
+taxWitholding = 0.00
+netPay = 0.00
+hourlyWage = float(input("Enter Hourly Wage: "))
+hoursWorked = float(input("Enter Hours Worked: "))
+grossPay = hourlyWage * hoursWorked
+print("Gross Pay Is ", grossPay)
+taxRate = float(input("Enter Tax Rate (Decimal Form): "))
+taxWitholding = grossPay * taxRate
+print("Taxes Witheld ", taxWitholding)
+netPay = grossPay - taxWitholding
+print("Net Pay is ", netPay)
