@@ -1,0 +1,14 @@
+IncRate = 0
+Tuition = 20000
+ctr = 1
+Ba = 0
+
+
+IncRate = float(input("Tuition increase %(in decimal form)"))
+
+while ctr < 11:
+    
+    Ba = Tuition * IncRate
+    Tuition = Tuition + Ba
+    print("Tuition will cost $", Tuition,"in ", ctr,"Years")
+    ctr = ctr + 1
