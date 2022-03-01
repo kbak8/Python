@@ -1,0 +1,17 @@
+weightPounds = 0.00
+heightInches = 0.00
+heightMeters = 0.00
+weightKg = 0.00
+bMi = 0.00
+
+while True:
+    weightPounds = float(input("Enter Body Weight in Pounds: "))
+    weightKg = (weightPounds * 453.59) / 1000
+    print("Your Weight in Kg is ", weightKg)
+    heightInches = float(input("Enter Height in Inches: "))
+    if heightInches == "0": break
+    heightMeters = (heightInches * 2.54) / 100
+    print("Your Height in Meters is ", heightMeters)
+    bMi = weightKg / (heightMeters * heightMeters)
+    print("Your Body Mass Index (BMI) is ", bMi)
+    
