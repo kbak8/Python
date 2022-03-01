@@ -1,0 +1,30 @@
+
+Dept = [0,0,0,0,0,0,0,0,0]
+DeptNum = [0,1,2,3,4,5,6,7,]
+DeptName = [" ", "Personnel", "Marketing", "Manufacturing", "Computer Services", "Sales", "Accounting", "Shipping"]
+Cont = "Y"
+HourlyPay = 0.00
+HoursWorked = 0.00
+TotalP = 0.00
+
+
+while Cont == "Y":
+    print(DeptName)
+    for DeptName in Dept:
+        Dept = input("Enter the Name of the department you would like to add to")
+        HourlyPay = float(input("Enter the Hourly pay"))
+        HoursWorked = int(input("Enter the Number of Hours Worked"))
+        TotalP = HourlyPay * HoursWorked                
+        Cont = input("Continue [Y/N]")
+        if Cont == "N":
+            break
+
+for Dept in DeptName:
+    print(DeptName, TotalP)
+
+
+print("You chose: ", DeptName)
+print("Department Numbers are: ",DeptNum)
+                        
+                    
+                         
