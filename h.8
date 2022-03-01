@@ -1,0 +1,23 @@
+
+IdNumber = 0
+ItemDescription = 0
+MinDays = 0
+MinBid = 0
+
+while IdNumber > -1:
+    print("To end data collection enter -1 for ID number length")
+    IdNumber = float(input("Enter ID Number: "))
+    if IdNumber == -1:
+        break
+    ItemDescription = input("Enter Description of Item: ")
+    MinDays = float(input("Enter Minimum Days of auction (Must be between 14 and 28 days inclusivly: "))
+    if MinDays < 13:
+        print("minimum days are to low, choose an auction length 14-28 days")
+        break
+    if MinDays > 29:
+        print("Maximum days are to high, choose an auction length 14-28 days")
+        break
+    print("ID Number :",IdNumber,)
+    print("Item Description :",ItemDescription,)
+    print("Auction Length :",MinDays,)
+
