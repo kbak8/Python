@@ -1,0 +1,45 @@
+
+
+class ItemsForSale: 
+    
+    def ItemsForSale(self, adNum, itemDesc, askPri, phoNum): 
+        self.adNum = adNum 
+        self.itemDesc = itemDesc+"  I'm the Parameterized Constructor" 
+        self.askPri = askPri 
+        self.phoNum = phoNum 
+    def ItemsForSale(self): 
+        self.adNum = int(0) 
+        self.itemDesc = input("UNKNOWN") 
+        self.askPri = float(0.00) 
+        self.phoNum = "XXX-XXX-XXXX"        
+    def mottodescription(self): 
+        return "Sell Stuff Locally!!" 
+    def description(self): 
+        return "Ad number is ({}), A description of the item is({}), The asking price for this item is ({}), and a phone number to reach them is ({}).".format(self.adNum, self.itemDesc, self.askPri, self.phoNum) 
+    def getadNum(self): 
+        return self.adNum 
+    def setadNum(self): 
+        self.adNum = adNum 
+    def getitemDesc(self): 
+        return self.itemDesc 
+    def setitemDesc(self): 
+        self.itemDesc = itemDesc 
+    def getaskPri(self): 
+        return self.askPri 
+    def setaskPri(self): 
+        self.askPri = askPri 
+    def getphoNum(self): 
+        return self.phoNum 
+    def setphoNum(self): 
+        self.phoNum = phoNum 
+def main(): 
+    item1 = ItemsForSale(210,"A vintage set of records with artist like Jimmy Hendrix and The Beatles",300.00,"1-734-679-6197") 
+    item2 = ItemsForSale(456, "A set of high end atv wheels", "$400", "1-560-989-5665") 
+    item3 = ItemsForSale() 
+    print(item1.description()) 
+    print(item1.mottodescription()) 
+    print(item2.description()) 
+    print(item2.mottodescription()) 
+    print(item3.description()) 
+    print(item3.mottodescription()) 
+main() 
