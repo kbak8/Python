@@ -1,0 +1,9 @@
+t_w = input("Enter 15 words to be sorted alphabetically: ")
+
+words = t_w.split()
+
+words.sort()
+
+print("The sorted words are:")
+for word in words:
+   print(word)
