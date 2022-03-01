@@ -1,0 +1,21 @@
+
+loan = 0
+month = 0
+balance = 0
+charge = 0
+total=0
+ctr = 0
+
+loan = float(input("Enter amount of loan: ")) 
+
+while loan > 0:
+    ctr = ctr + 1
+    month = float(input("Enter this months payment: "))
+    balance = loan - month
+    charge = balance * .01
+    loan = charge + balance
+    print("Amount still due is: ",loan)
+    if loan <= 0:
+        break
+
+print("Thanks for paying off your loan, it took ", ctr,"months to pay off")
