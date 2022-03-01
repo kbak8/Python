@@ -1,0 +1,50 @@
+firstFileCustLastName = ["none","none","none"]
+firstFileCustFirstName = ["none","none","none"]
+firstFileCustAddress = ["none","none","none"]
+firstFileCustYear = [0,0,0,-9999]
+secondFileCustLastName = ["none","none","none"]
+secondFileCustFirstName = ["none","none","none"]
+secondFileCustAddress = ["none","none","none"]
+secondFileCustYear = [0,0,0,-9999]
+MergedCustYear = [0,0,0,0,0,0]
+MergedCustFirstName = ["none","none","none","none","none","none"]
+MergedCustLasttName = ["none","none","none","none","none","none"]
+MergedCustAddress = ["none","none","none"]
+readOne = input("enter the first Dr. Best File Name ")
+file = open(readOne,"r")
+ctr = 0
+for oneLine in file:
+    firstFileCustFirstName[ctr],firstFileCustLastName[ctr],firstFileCustAddress[ctr],firstFileCustomerYear[ctr] = oneLine.split(",") 
+    ctr = ctr + 1
+readOne = input("enter the second Dr. Cushing File Name ")
+file = open(readOne,"r")
+ctr = 0
+for oneLine in file:
+    secondFileCustFirstName[ctr],secondFileCustLastName[ctr],secondFileCustAddress[ctr],secondtFileCustomerYear[ctr] = oneLine.split(",")
+    ctr = ctr + 1
+firstCtr = 0
+secondCtr = 0
+for outCtr in range(6):
+   if (int(firstFileCustYear[firstCtr]) < int(secondFileCustYear[secondCtr])) and (int(firstFileCustYear[firstCtr]) > 0) and int(secondFileCustYear[secondCtr]) > 0:
+        MergedCustYear[outCtr] = int(firstFileCustYear[firstCtr])
+        MergedCustFirstName[outCtr] = firstFileCustFirstName[firstCtr]
+        MergedCustLastName[outCtr] = firstFileCustLastName[firstCtr]
+        MergedCustAddress[outCtr] = float(firstFileCustAddress[firstCtr])
+        firstCtr = firstCtr + 1
+ 
+   else:
+        if int(secondFileCustYear[secondCtr]) > 0: 
+            MergedCustYear[outCtr] = int(secondFileCustYear[secondCtr])
+            MergedCustFirstName[outCtr] = secondFileCustFirstName[secondCtr]
+            MergedCustLastName[outCtr] = secondFileCustLastName[secondCtr]
+            MergedCustAddress[outCtr] = float(secondFileCustAddress[secondCtr])
+            secondCtr = secondCtr + 1
+        else:
+            if int(firstFileCustYear[firstCtr]) > 0:
+                MergedCustYear[outCtr] = int(firstFileCustYear[firstCtr])
+                MergedCustFirstName[outCtr] = firstFileCustFirstName[firstCtr]
+                MergedCustLastName[outCtr] = firstFileCustLastName[firstCtr]
+                MergedCustAddress[outCtr] = float(firstFileCustAddress[firstCtr]) 
+MergedCutstYear.sort
+print(MergedCustYear,MergedCustFirstName,MergedCustLastName)
+print(MergedCustYear[outCtr])
