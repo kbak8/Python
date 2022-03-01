@@ -1,0 +1,52 @@
+from tkinter import * 
+from tkinter import messagebox 
+total = float(0.00) 
+flavor = "UNKNOWN" 
+added  = "" 
+def clickOneScoop(): 
+    global total 
+    total = 2.20 
+def clickTwoScoop(): 
+    global total 
+    total = 3.00 
+def clickThreeScoop(): 
+    global total 
+    total = 4.00 
+def clickChoclateScoop(): 
+    global flavor 
+    flavor = "Chocolate" 
+def clickStrawBerryScoop(): 
+    global flavor 
+    flavor = "Strawberry" 
+def clickVanillaScoop(): 
+    global flavor 
+    flavor = "Vanilla" 
+def clickNuts(): 
+    global total 
+    global added 
+    total = total + .5 
+    added = added +" Nuts " 
+    messagebox.showinfo("Added", "You have added "+added) 
+def clickWhippedScoop(): 
+    global total 
+    global added 
+    total = total + .5 
+    added = added +" Whipped Cream " 
+    messagebox.showinfo("Added", "You have added "+added) 
+def clickCherriesScoop(): 
+    global total 
+    global added 
+    total = total + .5 
+    added = added +" Cherries " 
+    messagebox.showinfo("Added", "You have added "+added) 
+def hello(butMess): 
+    global total 
+    global added 
+    messagebox.showinfo("You total is ", "Your Flavor is "+flavor+" and You have added "+added+" and your total is "+butMess+str(total)) 
+    print("Hello, world! (Dosen't this seem old fashioned?)") 
+def selection(sel):  
+   selection = "You selected the radio option " + sel 
+   messagebox.showinfo("Hello Message", selection) 
+def quit(w): 
+    w.destroy() 
+class winHello(): 
