@@ -1,0 +1,34 @@
+
+print("Hi, welcome to The Jumpin' Jive coffee shop!") 
+extraOptions = ["Whipped Cream", "Cinnamon","Chocolate Sauce", "Amaretto","Irish Whiskey"] 
+extraPrices = [.89,.25,.59,1.50,1.75] 
+customerOrder = "UNKNOWN" 
+
+finalCost = float(0.00) 
+
+def extras(): 
+    extrachoice = "UNKNOWN" 
+    extrachoice = input("Which would you like to add?") 
+    if extrachoice == "Whipped Cream": 
+        return .89 
+    if extrachoice == "Cinnamon": 
+        return .25 
+    if extrachoice == "Chocolate Sauce": 
+        return .59 
+    if extrachoice == "Amaretto": 
+        return 1.50 
+    if extrachoice == "Irish Whiskey": 
+        return 1.75 
+def finalTotal(finalCost): 
+    print ("Your final total comes out to",finalCost) 
+def main(): 
+    coffeeCost = float(0.00) 
+    customerOrder = input("Would you like to order a coffee today? [Y/N]") 
+    coffeeCost += 2.00 
+    customerExtras = input("Would you like to add any toppings to your coffee? [Y/N]") 
+    while customerExtras == "Y": 
+        if customerExtras == "Y": 
+            coffeeCost += extras() 
+            customerExtras = input("Do have any more toppings to add to your coffee? [Y/N]") 
+    finalTotal(coffeeCost)          
+main() 
