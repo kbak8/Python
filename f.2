@@ -1,0 +1,77 @@
+from tkinter import * 
+from tkinter import messagebox
+total=float(0.00)
+room=""
+add=""
+class winFinish(): 
+    def __init__(self): 
+        win = Tk()
+        win.title("Fortune's Vacation Resort")
+        global total
+        global room
+        global add
+        total=0.00
+        win.geometry('500x750')
+        frame = Frame(win,height=500,width=750,bg="maroon") 
+        frame.pack()
+        OpO =  Frame(frame,height=100,width=250,bg="blue")
+        OpO.pack()
+        OpO.place(relx=.5,rely=.25,anchor=CENTER)
+        btn =Checkbutton(frame, text='Studio', command=Studio) 
+        btn.pack() 
+        btn.place(relx=0.25, rely=0.5, anchor=CENTER)
+        bt = Checkbutton(frame, text='1 Bedroom', command=OneBed)
+        bt.pack()
+        bt.place(relx=0.5, rely=0.5, anchor=CENTER)
+        bn = Checkbutton(frame, text='2 Bedroom', command=TwoBed)
+        bn.pack()
+        bn.place(relx=.75, rely=0.5, anchor=CENTER)
+        ck = Checkbutton(frame, text="+Lake View", command=Lk)
+        ck.pack()
+        ck.place(relx=.5, rely=.65, anchor=CENTER)
+        tx=Text(OpO,height=2,width=25)
+        tx.pack
+        tx.insert(END,"Fortune's Vacation Resort")
+        tx.place(relx=.5,rely=.5,anchor=CENTER)
+        cl=Button(frame,text="Cancel",command=lambda: quit(win))
+        cl.pack()
+        cl.place(relx=.75,rely=.75)
+        btnMess=Button(frame,text="Reserve Cabin",command=lambda: hello(" $"))
+        btnMess.pack()
+        btnMess.place(relx=.25,rely=.75,anchor=CENTER)
+        win.mainloop()
+
+def OneBed(): 
+    global total
+    global room
+    total=total+350.00
+    room=room+" One Bed "
+def TwoBed():
+    global total
+    global room
+    total=total+400.00
+    room=room+" Two Bed "
+def Studio():
+    global total
+    global room
+    total=total+300.00
+    room=room+" Studio "
+def Lk():
+    global total
+    global add
+    total=total+50.00
+    add="with a Lake View "
+def quit(w):
+    w.destroy()
+def hello(butMess):
+    global total
+    global room
+    global add
+    messagebox.showinfo("Amount Due","Your reservation is for "+room+add+" Your total per week comes to"+butMess+str(total))
+    print("Your total is",total)
+    print("Your reservations are for",room,add)
+def mainloop(): 
+    winS = winFinish() 
+mainloop()   
+   
+
