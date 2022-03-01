@@ -1,0 +1,15 @@
+
+fileName = input("Enter a file name") 
+patBal = [0.0,0.0,0.0] 
+patNames = ["None","None","None"] 
+inDoc = open(filename,"r") 
+  
+ctr = 0 
+for inDocone in inDoc:  
+    patName,patBal = inDocOne.split() 
+    patName[ctr] = patName 
+    patBals[ctr] = float(patBal) 
+    ctr = ctr + 1 
+  
+limit = ctr 
+ctr = 0 
