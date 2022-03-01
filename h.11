@@ -1,0 +1,14 @@
+
+ctr = 0
+Words = ["123456", "password", "123456789", "12345678", "12345", "111111", "1234567", "sunshine", "qwerty", "iloveyou"]
+
+
+print("Hint! These are your answers ", Words)
+
+while ctr == 0:
+    Guess = input("Enter Guess again")
+    if Guess in Words:
+        print("Nice Job!!")
+        ctr = ctr + 1
+    
+    
